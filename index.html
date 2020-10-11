@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: #4CAF50;
+    }
+  </style>
+</head>
+
+
+
+
+<ul>
+  <li><a class="active" href="index.html">Dashboard </a> </li>
+  <li><a href="RidgelinesWithNav.html">Multiple Line Chart</a></li>
+  <li><a href="BarchartWithNav.html">Bar Charts</a></li>
+  <li><a href="KylieHeatmapWithNav.html">Heatmap</a></li>
+  <li><a href="ScatterPlotWithNav.html">Scatterplot</a></li>
+  <li style="float:right"><a href="About.html">About</a></li>
+</ul>
+
+
+
+
+
+<meta charset="utf-8">
+
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="dataset-picker"></div>
+<div id="my_dataviz"></div>
+<div id="my_tooltip"></div>
+
+
+<head>
+  <title>Microbiome Visualisation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <h1>Gut Microbiome Visualistion for the onset of Status Epilepticus</h1>
+    <h2>Seizure Activity over 12 Hours</h2>
+    <div>
+      <iframe src="Ridgelines.html" height="500" width=2000" frameBorder="0"></iframe>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 col-md-6 col-lg-4">
+        <h2>Latency Averages in Seizure Onset</h2>
+        <p></p>
+        <p>Select Behavioral, Combined, or Focal</p>
+        <form id="form1" method="post">
+          <select id="location" onchange="setIframeSource()">
+            <option value="behavioural.html">Behavioral</option>
+            <option value="combined.html">Combined</option>
+            <option value="focal.html">Focal</option>
+          </select>
+        </form>
+
+        <iframe id="myIframe" src="behavioural.html" frameborder="0" marginwidth="0" marginheight="0" width="800" height="650"></iframe>
+      </div>
+      <div class="col-sm-9 col-md-6 col-lg-8">
+        <h2>Seizure Heatmap</h2>
+        <iframe src="KylieHeatmap1.html" height="900" width="800" frameBorder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  function setIframeSource() {
+    // behavior of myIframe
+    var theSelect = document.getElementById('location');
+    var theIframe = document.getElementById('myIframe');
+    var theUrl;
+    theUrl = theSelect.options[theSelect.selectedIndex].value;
+    theIframe.src = theUrl;
+
+    // behavior of myIframe2
+    var theSelect2 = document.getElementById('location');
+    var theIframe2 = document.getElementById('myIframe2');
+    var theUrl2;
+    theUrl2 = theSelect2.options[theSelect2.selectedIndex].value;
+    theIframe2.src = theUrl2;
+
+    // behavior of myIframe3
+    var theSelect3 = document.getElementById('location');
+    var theIframe3 = document.getElementById('myIframe3');
+    var theUrl3;
+    theUrl3 = theSelect3.options[theSelect3.selectedIndex].value;
+    theIframe3.src = theUrl3;
+  }
+</script>
+
+
+</html>

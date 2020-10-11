@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: #4CAF50;
+    }
+
+    .
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <ul>
+    <li><a href="index.html">Dashboard</a></li>
+    <li><a href="RidgelinesWithNav.html">Ridgelines</a></li>
+    <li><a class="active" href="BarchartWithNav.html">Bar Charts</a></li>
+    <li><a href="KylieHeatmapWithNav.html">Heatmap</a></li>
+    <li><a href="ScatterPlotWithNav.html">Scatterplot</a></li>
+    <li style="float:right"><a href="About.html">About</a></li>
+  </ul>
+
+
+  <div class="row">
+    <div class="col-sm-4">
+      <iframe id="myIframe" src="behavioural.html" frameborder="0" marginwidth="0" marginheight="0" width="400" height="650"></iframe>
+    </div>
+    <div class="col-sm-4"><iframe id="myIframe" src="focal.html" frameborder="0" marginwidth="0" marginheight="0" width="600" height="650"></iframe></div>
+
+    <div class="col-sm-4">
+      <iframe id="myIframe" src="combined.html" frameborder="0" marginwidth="0" marginheight="0" width="400" height="650"></iframe></div>
+  </div>
+
+
+  <div style=' margin-left:50px'>
+    <row>
+      <col>
+      <h3>Bar graphs are used with discrete frequencies of categorical data</h3>
+      <h4>Pros</h4>
+      Insights are drawn from ordering the bars <br></br>
+      Bar charts are a common idiom used in the field already<br></br>
+      Easy to read<br></br>
+      <h4>Cons</h4>
+      Easily confused with histograms<br></br>
+      If there are too many categories, they become hard to read
+      <br></br>
+      <br></br>
+      <br></br>
+      </col>
+    </row>
+  </div>
